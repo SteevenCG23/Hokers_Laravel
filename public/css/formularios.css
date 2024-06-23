@@ -1,14 +1,10 @@
-.container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
 .background-radial-gradient {
-background-color: hsl(218, 41%, 15%);
-background-image: radial-gradient(650px circle at 0% 0%,
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(218, 41%, 15%);
+  background-image: radial-gradient(650px circle at 0% 0%,
     hsl(218, 41%, 35%) 15%,
     hsl(218, 41%, 30%) 35%,
     hsl(218, 41%, 20%) 75%,
@@ -27,7 +23,7 @@ height: 220px;
 width: 220px;
 top: -60px;
 left: -130px;
-background: radial-gradient(#44006b, #ad1fff);
+background: radial-gradient(#006b15, #2fe778);
 overflow: hidden;
 }
 
@@ -37,11 +33,25 @@ bottom: -60px;
 right: -110px;
 width: 300px;
 height: 300px;
-background: radial-gradient(#44006b, #ad1fff);
+background: radial-gradient(#006b15, #2fe778);
 overflow: hidden;
 }
 
 .bg-glass {
 background-color: hsla(0, 0%, 100%, 0.9) !important;
 backdrop-filter: saturate(200%) blur(25px);
+}
+
+.logo{
+  width: 20%; 
+  display: block;
+  margin: auto; 
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: black;
 }
