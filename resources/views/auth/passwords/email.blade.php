@@ -21,7 +21,7 @@
     <!-- Section: Design Block -->
     <section class="background-radial-gradient overflow-hidden">
 
-        <div class="container px-4 py-5 px-md-5 text-center text-lg-start mt-5">
+        <div class="container px-4 py-2 px-md-5 text-center text-lg-start mt-5">
             <div class="row gx-lg-5 align-items-center mb-5">
                 <div class="col-lg-6 mb-5 mb-lg-0 d-none d-md-block" style="z-index: 10">
                     <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
@@ -42,7 +42,7 @@
                     <div class="card bg-glass">
                         <form method="POST" action="{{ route('password.email') }}">
                             @csrf
-                            <a href="{{ route('home') }}"><img src="{{ asset('Logo_Hokers.png') }}" alt="logo hokers" class="logo" ></a>
+                            <a href="{{ url('/') }}"><img src="{{ asset('Logo_Hokers.png') }}" alt="logo hokers" class="logo" ></a>
                             <h2 class="fw-bold mb-3 text-uppercase text-center">Recuperar contraseña</h2>
                             <div class="card-body px-4 pb-5 px-md-5">
                                 @if (session('status'))

@@ -47,7 +47,7 @@
                         <div class="card-body px-4 pb-5 px-md-5">
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
-                                <img src="{{ asset('Logo_Hokers.png') }}" alt="logo hokers" class="logo">
+                                <a href="{{ url('/') }}"><img src="{{ asset('Logo_Hokers.png') }}" alt="logo hokers" class="logo" ></a>
                                 <h2 class="fw-bold mb-3 text-uppercase text-center">Iniciar sesión</h2>
                                 <!-- 2 column grid layout with text inputs for the first and last names
                 <div class="row">
@@ -100,7 +100,7 @@
                                         <!-- Checkbox -->
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="remember"
-                                                id="remember" {{ old('remember') ? 'checked' : '' }} />
+                                                id="remember" style="cursor: pointer" {{ old('remember') ? 'checked' : '' }} />
                                             <label class="form-check-label" for="remember"> {{ __('Remember Me') }}
                                             </label>
                                         </div>
