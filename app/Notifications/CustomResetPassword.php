@@ -14,6 +14,10 @@ class CustomResetPassword extends Notification
      * @var string
      */
     public $token;
+
+     /**
+     * The user information.
+     */
     public $user;
 
     /**

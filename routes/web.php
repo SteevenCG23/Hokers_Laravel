@@ -18,10 +18,9 @@ Route::get('/', function () {
 });
 
 
+Auth::routes(['verify' => true]); 
 
-Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('verified')->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/home', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin');
+/*Route::get('/home', [App\Http\Controllers\AdminController::class, 'dashboard'])->middleware('verified')->name('admin');*/
 
