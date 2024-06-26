@@ -1,8 +1,14 @@
+.custom-column {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 125px;
+    color: #fff;
+
+}
+
+
+
 .background-radial-gradient {
-    min-height: 100vh;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     background-color: hsl(218, 41%, 15%);
     background-image: radial-gradient(650px circle at 0% 0%,
             hsl(218, 41%, 35%) 15%,
@@ -16,6 +22,7 @@
             hsl(218, 41%, 20%) 75%,
             hsl(218, 41%, 19%) 80%,
             transparent 100%);
+
 }
 
 #radius-shape-1 {
@@ -40,18 +47,4 @@
 .bg-glass {
     background-color: hsla(0, 0%, 100%, 0.9) !important;
     backdrop-filter: saturate(200%) blur(25px);
-}
-
-.btn-gray {
-    background-color: #6c757d;
-    /* Puedes ajustar el valor hexadecimal al tono de gris que prefieras */
-    border-color: #6c757d;
-    color: white;
-    /* Ajusta el color del texto según sea necesario */
-}
-
-.btn-gray:hover {
-    background-color: #454c51;
-    /* Color más oscuro para el estado hover */
-    border-color: #545b62;
 }

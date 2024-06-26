@@ -11,16 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->nullable();
-            $table->string('google_id')->nullable();
-            $table->string('role')->default('user'); //The column's default value is user
-            $table->rememberToken();
+            $table->string('description');
+            $table->integer('price');
+            $table->binary('image');
             $table->timestamps();
+            $table->string('status')->default('activo');
         });
     }
 
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::drop('products');
     }
 };

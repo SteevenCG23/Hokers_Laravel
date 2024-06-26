@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!--Icon page-->
-    <link rel="icon" href="{{ asset('Logo_Hokers.png') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('images/Logo_Hokers.png') }}" type="image/x-icon" />
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -43,7 +43,7 @@
 
                         <form method="POST" action="{{ route('verification.resend') }}">
                             @csrf
-                            <a href="{{ url('/') }}"><img src="{{ asset('Logo_Hokers.png') }}" alt="logo hokers"
+                            <a href="{{ url('/') }}"><img src="{{ asset('images/Logo_Hokers.png') }}" alt="logo hokers"
                                     class="logo"></a>
                             <h2 class="fw-bold mb-3 text-uppercase text-center">Verificar correo</h2>
                             <div class="card-body px-4 pb-5 px-md-5">
