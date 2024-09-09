@@ -133,18 +133,13 @@
 
                                     <!-- Register buttons -->
                                     <a data-mdb-ripple-init class="btn btn-primary btn-lg mb-3"
-                                        style="background-color: #ffffff; color:black" href="#!" role="button">
+                                        style="background-color: #ffffff; color:black" href="{{ route('auth.google') }}" role="button">
                                         <i class="fab fa-google me-2"></i>Continuar con Google
                                     </a>
                                     <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block mb-3"
                                         style="background-color: #3b5998" href="#!" role="button">
                                         <i class="fab fa-facebook-f me-2"></i>Continuar con Facebook
                                     </a>
-                                    <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block"
-                                        style="background-color: #55acee" href="#!" role="button">
-                                        <i class="fa-brands fa-x-twitter me-2"></i>Continuar con Twitter
-                                    </a>
-
                                 </div>
                             </form>
                         </div>

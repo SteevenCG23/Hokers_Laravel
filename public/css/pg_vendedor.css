@@ -1,71 +1,153 @@
-.navbar{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-.custom-column {
-width: 100px;
-margin-top: 20px;
-margin-left: 125px;
-color: #fff;
-
-}
-
-.background-radial-gradient {
+body {
+    background: linear-gradient(135deg, #0a152a, #365b99);
     min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: hsl(218, 41%, 15%);
-    background-image: radial-gradient(650px circle at 0% 0%,
-      hsl(218, 41%, 35%) 15%,
-      hsl(218, 41%, 30%) 35%,
-      hsl(218, 41%, 20%) 75%,
-      hsl(218, 41%, 19%) 80%,
-      transparent 100%),
-    radial-gradient(1250px circle at 100% 100%,
-      hsl(218, 41%, 45%) 15%,
-      hsl(218, 41%, 30%) 35%,
-      hsl(218, 41%, 20%) 75%,
-      hsl(218, 41%, 19%) 80%,
-      transparent 100%);
-  }
-
-#radius-shape-1 {
-height: 220px;
-width: 220px;
-top: -60px;
-left: -130px;
-background: radial-gradient(#44006b, #ad1fff);
-overflow: hidden;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-#radius-shape-2 {
-border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-bottom: -60px;
-right: -110px;
-width: 300px;
-height: 300px;
-background: radial-gradient(#44006b, #ad1fff);
-overflow: hidden;
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    z-index: 1;
+    color: white
 }
 
-.bg-glass {
-background-color: hsla(0, 0%, 100%, 0.9) !important;
-backdrop-filter: saturate(200%)blur(25px);
+.texto_contenedor{
+    grid-column: span 2;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 30px rgb(0 0 0 / 22%);
+    background: #ffffff24;
 }
 
-.bg-glass {
-    background-color: hsla(0, 0%, 100%, 0.9) !important;
-    backdrop-filter: saturate(200%) blur(25px);
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    z-index: 1;
+    position: relative;
 }
 
-.btn-gray {
-    background-color: #6c757d; /* Puedes ajustar el valor hexadecimal al tono de gris que prefieras */
-    border-color: #6c757d;
-    color: white; /* Ajusta el color del texto según sea necesario */
+.opcion {
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 1px 15px 30px rgb(0 0 0 / 22%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s ease;
+    border: 3px solid #ffffff;
 }
 
-.btn-gray:hover {
-    background-color: #454c51; /* Color más oscuro para el estado hover */
-    border-color: #545b62;
+.opcion:hover {
+    border: 3px solid #e2e2e2;
+    background: #3c3c3c00;
+    backdrop-filter: blur(40px);
+    box-shadow: 0px 0px 100px rgb(0 0 0 / 60%);
+}
+
+.opcion:hover img {
+    filter: invert(1);
+}
+
+.opcion img {
+    backdrop-filter: revert;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.boton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: #0066cc;
+    color: white;
+    transition: .2s ease-out;
+}
+
+.boton:hover {
+    background-color: #002f5d;
+    color: white;
+    box-shadow: inset 0px 0px 20px #0080ff;
+}
+
+.boton.salir {
+    background-color: #ccc;
+    transition: .2s ease-out;
+    color: #000000;
+}
+
+.boton.salir:hover {
+        box-shadow: inset 0px 0px 20px #464646;
+    background-color: #4a4a4a;
+    color: #ffffff;
+}
+
+.cerrar-sesion {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+}
+
+.circulo {
+    position: absolute;
+    border-radius: 50%;
+    background: #feba01;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.circulo1 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -100px;
+    background: #feba01d4;
+}
+
+.circulo2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+}
+
+.circulo3 {
+    width: 150px;
+    height: 150px;
+    bottom: 200px;
+    left: 100px;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .cerrar-sesion {
+        grid-column: 1;
+    }
 }

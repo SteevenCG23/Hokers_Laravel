@@ -1,50 +1,175 @@
-.custom-column {
-    width: 100px;
-    margin-top: 20px;
-    margin-left: 125px;
-    color: #fff;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-
-
-.background-radial-gradient {
-    background-color: hsl(218, 41%, 15%);
-    background-image: radial-gradient(650px circle at 0% 0%,
-            hsl(218, 41%, 35%) 15%,
-            hsl(218, 41%, 30%) 35%,
-            hsl(218, 41%, 20%) 75%,
-            hsl(218, 41%, 19%) 80%,
-            transparent 100%),
-        radial-gradient(1250px circle at 100% 100%,
-            hsl(218, 41%, 45%) 15%,
-            hsl(218, 41%, 30%) 35%,
-            hsl(218, 41%, 20%) 75%,
-            hsl(218, 41%, 19%) 80%,
-            transparent 100%);
-
-}
-
-#radius-shape-1 {
-    height: 220px;
-    width: 220px;
-    top: -60px;
-    left: -130px;
-    background: radial-gradient(#44006b, #ad1fff);
+body {
+    background: linear-gradient(135deg, #0a152a, #365b99);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     overflow: hidden;
 }
 
-#radius-shape-2 {
-    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-    bottom: -60px;
-    right: -110px;
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    z-index: 1;
+}
+
+.texto_contenedor{
+    grid-column: span 2;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 30px rgb(0 0 0 / 22%);
+    background: #ffffff24;
+}
+
+.texto_contenedor h1{
+    color: white;
+}
+
+.tarjeta-perfil, .informacion-usuario, .estado-proyectos {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 15px 30px rgb(0 0 0 / 22%);
+}
+
+.tarjeta-perfil {
+    grid-column: span 2;
+    text-align: center;
+    padding: 30px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #919191;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.editar {
+    background-color: #0066cc;
+    color: white;
+    transition: .2s ease-out;
+}
+
+.editar:hover {
+    background-color: #002f5d;
+    color: white;
+    box-shadow: inset 0px 0px 20px #0080ff;
+}
+
+.regresar {
+    background-color: #ccc;
+    transition: .2s ease-out;
+    color: #000000;
+}
+
+.regresar:hover {
+    box-shadow: inset 0px 0px 20px #464646;
+    background-color: #4a4a4a;
+    color: #ffffff;
+}
+
+.informacion-usuario p, .estado-proyectos h3, .estado {
+    margin-bottom: 15px;
+}
+
+.estado-proyectos .estado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progreso {
+    background-color: #e0e0e0;
+    width: 70%;
+    height: 8px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.barra-progreso {
+    background-color: #0066cc;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.circulo {
+    position: absolute;
+    border-radius: 50%;
+    background: #feba01;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.circulo1 {
     width: 300px;
     height: 300px;
-    background: radial-gradient(#44006b, #ad1fff);
-    overflow: hidden;
+    top: -150px;
+    left: -100px;
+    background: #feba01d4;
 }
 
-.bg-glass {
-    background-color: hsla(0, 0%, 100%, 0.9) !important;
-    backdrop-filter: saturate(200%) blur(25px);
+.circulo2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
 }
+
+.circulo3 {
+    width: 150px;
+    height: 150px;
+    bottom: 200px;
+    left: 100px;
+}
+
+.informacion-usuario hr{
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+
+

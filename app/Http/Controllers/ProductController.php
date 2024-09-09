@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\User;
+use DragonCode\Contracts\Cashier\Auth\Auth;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -16,6 +18,12 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
 
+    public function productsList()
+    {
+        $products = Product::all();
+        return view('admin.products.index', compact('products'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -24,6 +32,13 @@ class ProductController extends Controller
         $products = Product::all();
         return view('products.index', compact('products'));
     }
+
+    public function admincreateproduct()
+    {
+        $products = Product::all();
+        return view('admin.products.create', compact('products'));
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -46,8 +61,12 @@ class ProductController extends Controller
             $product->image = file_get_contents($image->getRealPath());
         }
 
+        //Save the id of the authenticated seller
+        /* $product->sellerId = Auth::id();  */
+
         $product->save();
-        return redirect()->back();
+        return redirect()->back()->with('mensaje_create','');
+
     }
 
     /**
@@ -82,7 +101,7 @@ class ProductController extends Controller
         }
 
         $product->save();
-        return redirect()->back();
+        return redirect()->back()->with('mensaje_edit','');
     }
 
     /**
@@ -94,7 +113,7 @@ class ProductController extends Controller
         $product->status = 'inactivo';
 
         $product->save();
-        return redirect()->back();
+        return redirect()->back()->with('mensaje_delete','');
     }
 
     /**
@@ -126,6 +145,15 @@ class ProductController extends Controller
      */
     public function perfil()
     {
-        return view('products.perfil');
+        $products = Product::all();
+        return view('products.perfil',compact('products'));
     }
+
+
+    public function pg_cliente()
+    {
+        $products = Product::all();
+        return view('home', compact('products'));
+    }
+
 }

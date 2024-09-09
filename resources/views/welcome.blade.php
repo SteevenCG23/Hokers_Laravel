@@ -100,7 +100,7 @@
     <section class="page-section bg-light" id="equipo">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Nuetsro increible equipo</h2>
+                <h2 class="section-heading text-uppercase">Nuestro increible equipo</h2>
                 <h3 class="section-subheading text-muted">únete a nuestra familia</h3>
             </div>
             <div class="row">
@@ -210,7 +210,7 @@
     <footer class="footer py-4">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start">Copyright &copy; hokers, Inc</div>
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Hokers</div>
                 <!-- <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
